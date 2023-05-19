@@ -46,3 +46,27 @@ void list::addnode() /* Menambahkan Sebuah Node Kedalam List */
             return;
         }
     }
+    nodeBaru->next = START;
+    START = nodeBaru;
+    return;
+
+    Node* previous, * current;
+
+    current = START;
+    previous = START;
+
+    while ((current != NULL) && (nim >= current->noMhs))
+    {
+        if (nim == current->noMhs)
+        {
+            cout << "\nDuplikasi noMhs tidak diijikan\n";
+            return;
+        }
+        previous = current;
+        current = current->next;
+    }
+    /*jika loop diatas dieksekusi, previous dan current akan menemapati posisi dimana */
+    nodeBaru->next = current;
+    previous->next = nodeBaru;
+}
+

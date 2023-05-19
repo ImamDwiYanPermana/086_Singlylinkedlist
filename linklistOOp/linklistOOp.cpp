@@ -131,4 +131,12 @@ int main()
         cout << " 5. keluar " << endl;
         cout << endl << " masukan pilihan (1-5):";
         cin >> ch;
-      
+        switch (ch)
+        {
+        case '1':
+        {
+            mhs.addnode();
+        }
+        break;
+
+        

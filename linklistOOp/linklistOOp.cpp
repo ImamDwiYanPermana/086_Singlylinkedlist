@@ -25,3 +25,24 @@ list::list() {
     START = NULL;
 }
 
+void list::addnode() /* Menambahkan Sebuah Node Kedalam List */
+{
+    int nim;
+    char nm[20];
+    cout << "\n Masukan Nomor Mahasiswa: ";
+    cin >> nim;
+    cout << "\n Masukan Nama";
+    cin >> nm;
+
+    Node* nodeBaru = new Node;
+    nodeBaru->noMhs = nim;
+    strcpy_s(nodeBaru->nama, nm);
+
+    if (START == NULL || nim <= START->noMhs)
+    {
+        if ((START != NULL) && (nim == START->noMhs))
+        {
+            cout << "\n DUplikasi noMhs diijinkann\n";
+            return;
+        }
+    }

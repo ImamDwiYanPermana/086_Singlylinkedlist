@@ -66,7 +66,7 @@ void list::addnode() /* Menambahkan Sebuah Node Kedalam List */
         current = current->next;
     }
     /*jika loop diatas dieksekusi, previous dan current akan menemapati posisi dimana */
-    nodeBaru->next = current;
+        nodeBaru->next = current;
     previous->next = nodeBaru;
 }
 
@@ -91,7 +91,7 @@ bool list::delnode(int nim)/* Menghapus node dari dalam list*/
 }
 
 /* Chech apakah node yang dimaksud ada diddalam list atau tidak */
-bool list::Search(int nim, Node** previous, Node** current)
+bool list::Search(int nim, Node * *previous, Node * *current)
 {
     *previous = START;
     *current = START;
@@ -123,4 +123,12 @@ int main()
     char ch;
     while (1)
     {
-        
+        cout << endl << "menu";
+        cout << endl << " 1, menambah data kedalam list" << endl;
+        cout << "2. menghapus data dari dalam list " << endl;
+        cout << "3. menampilkan semua data didalam list " << endl;
+        cout << " 4. mencari data dalam list" << endl;
+        cout << " 5. keluar " << endl;
+        cout << endl << " masukan pilihan (1-5):";
+        cin >> ch;
+      

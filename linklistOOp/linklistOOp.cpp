@@ -153,4 +153,9 @@ int main()
             else
                 cout << endl << " data dengan nomor Mahasiswa " << nim << "berhasil";
         }
+        case '3': {
+            mhs.traverse();
+        }
+                break;
+
         
